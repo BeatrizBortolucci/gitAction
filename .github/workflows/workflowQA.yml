@@ -1,0 +1,23 @@
+name: PIPELINE QA
+
+on:
+
+  push:
+    branches: [ "QA" ]
+  pull_request:
+    branches: [ "QA" ]
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: primeiro comando Tarefa
+        run: echo Usando a branch QA
